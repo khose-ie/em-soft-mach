@@ -20,7 +20,7 @@ config CPU_SERIES_STM32H7XX
 endchoice
 
 choice
-	prompt "CPU Model"
+	prompt "CPU Model with STMicroelectronics"
 	depends on CPU_SERIES_STM32F1XX
 
 config CPU_MODEL_STM32F100XB
@@ -68,7 +68,7 @@ config CPU_MODEL_STM32F107XC
 endchoice
 
 choice
-	prompt "CPU Model"
+	prompt "CPU Model with STMicroelectronics"
 	depends on CPU_SERIES_STM32F4XX
 
 config CPU_MODEL_STM32F401XC
@@ -143,7 +143,7 @@ config CPU_MODEL_STM32F479XX
 endchoice
 
 choice
-	prompt "CPU Model"
+	prompt "CPU Model with STMicroelectronics"
 	depends on CPU_SERIES_STM32F7XX
 
 config CPU_MODEL_STM32F722XX
@@ -191,7 +191,7 @@ config CPU_MODEL_STM32F779XX
 endchoice
 
 choice
-	prompt "CPU Model"
+	prompt "CPU Model with STMicroelectronics"
 	depends on CPU_SERIES_STM32H5XX
 
 config CPU_MODEL_STM32H503XX
@@ -215,7 +215,7 @@ config CPU_MODEL_STM32H573XX
 endchoice
 
 choice
-	prompt "CPU Model"
+	prompt "CPU Model with STMicroelectronics"
 	depends on CPU_SERIES_STM32H7XX
 
 config CPU_MODEL_STM32H723XX

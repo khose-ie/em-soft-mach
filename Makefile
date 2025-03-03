@@ -114,6 +114,7 @@ KBUILD_AFLAGS   += $(MCU) \
 
 # MCU Linker Flags
 LDFLAGS         += $(MCU) \
+                   -T$(srctree)/.FLASH.o.ld
                    -specs=nano.specs \
                    -wl,--gc-sections
 

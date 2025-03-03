@@ -116,7 +116,7 @@ KBUILD_AFLAGS   += $(MCU) \
 KBUILD_LDFLAGS  += $(MCU) \
                    -T$(srctree)/.FLASH.o.ld \
                    -specs=nano.specs \
-                   -lc -lm \
+                   -lc -lm -lnosys \
                    -Wl,--gc-sections
 
 # STM32 Common CMSIS Includes

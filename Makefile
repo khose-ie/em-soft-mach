@@ -1,9 +1,9 @@
 # CPU
-CPU = $(if $(CONFIG_CPU_SERIES_STM32F1), -mcpu=cortex-m3)  \
-      $(if $(CONFIG_CPU_SERIES_STM32F4), -mcpu=cortex-m4)  \
-      $(if $(CONFIG_CPU_SERIES_STM32F7), -mcpu=cortex-m4)  \
-      $(if $(CONFIG_CPU_SERIES_STM32H5), -mcpu=cortex-m33) \
-      $(if $(CONFIG_CPU_SERIES_STM32H7), -mcpu=cortex-m7)
+CPU = $(if $(CONFIG_CPU_SERIES_STM32F1XX), -mcpu=cortex-m3)  \
+      $(if $(CONFIG_CPU_SERIES_STM32F4XX), -mcpu=cortex-m4)  \
+      $(if $(CONFIG_CPU_SERIES_STM32F7XX), -mcpu=cortex-m4)  \
+      $(if $(CONFIG_CPU_SERIES_STM32H5XX), -mcpu=cortex-m33) \
+      $(if $(CONFIG_CPU_SERIES_STM32H7XX), -mcpu=cortex-m7)
 
 # FPU
 FPU = -mfpu=fpv4-sp-d16

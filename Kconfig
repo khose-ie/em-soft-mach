@@ -21,7 +21,7 @@ endchoice
 
 choice
 	prompt "CPU Model"
-	depends on CPU_SERIES_STM32F1
+	depends on CPU_SERIES_STM32F1XX
 
 config CPU_MODEL_STM32F100XB
 	bool "STM32F100XB"
@@ -69,7 +69,7 @@ endchoice
 
 choice
 	prompt "CPU Model"
-	depends on CPU_SERIES_STM32F4
+	depends on CPU_SERIES_STM32F4XX
 
 config CPU_MODEL_STM32F401XC
 	bool "STM32F401XC"
@@ -144,7 +144,7 @@ endchoice
 
 choice
 	prompt "CPU Model"
-	depends on CPU_SERIES_STM32F7
+	depends on CPU_SERIES_STM32F7XX
 
 config CPU_MODEL_STM32F722XX
 	bool "STM32F722XX"
@@ -192,7 +192,7 @@ endchoice
 
 choice
 	prompt "CPU Model"
-	depends on CPU_SERIES_STM32H5
+	depends on CPU_SERIES_STM32H5XX
 
 config CPU_MODEL_STM32H503XX
 	bool "STM32H503XX"
@@ -216,7 +216,7 @@ endchoice
 
 choice
 	prompt "CPU Model"
-	depends on CPU_SERIES_STM32H7
+	depends on CPU_SERIES_STM32H7XX
 
 config CPU_MODEL_STM32H723XX
 	bool "STM32H723XX"

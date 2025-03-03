@@ -124,18 +124,18 @@ APPINCLUDE += -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-core/Include \
               -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-core/RTOS2/Include
 
 # MCU Includes
-APPINCLUDE += $(if $(CONFIG_CPU_SERIES_STM32F1), -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-device-f1/Include    \
-                                                 -I$(srctree)/arch/arm/mach-stm/drivers/stm32f1xx-hal-driver/Inc \
-                                                 -I$(srctree)/arch/arm/mach-stm/drivers/stm32f1xx-hal-driver/Inc/Legacy)  \
-              $(if $(CONFIG_CPU_SERIES_STM32F4), -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-device-f4/Include    \
-                                                 -I$(srctree)/arch/arm/mach-stm/drivers/stm32f4xx-hal-driver/Inc \
-                                                 -I$(srctree)/arch/arm/mach-stm/drivers/stm32f4xx-hal-driver/Inc/Legacy)  \
-              $(if $(CONFIG_CPU_SERIES_STM32F7), -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-device-f7/Include    \
-                                                 -I$(srctree)/arch/arm/mach-stm/drivers/stm32f7xx-hal-driver/Inc \
-                                                 -I$(srctree)/arch/arm/mach-stm/drivers/stm32f7xx-hal-driver/Inc/Legacy)  \
-              $(if $(CONFIG_CPU_SERIES_STM32H5), -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-device-h5/Include    \
-                                                 -I$(srctree)/arch/arm/mach-stm/drivers/stm32h5xx-hal-driver/Inc \
-                                                 -I$(srctree)/arch/arm/mach-stm/drivers/stm32h5xx-hal-driver/Inc/Legacy)  \
-              $(if $(CONFIG_CPU_SERIES_STM32H7), -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-device-h7/Include    \
-                                                 -I$(srctree)/arch/arm/mach-stm/drivers/stm32h7xx-hal-driver/Inc \
-                                                 -I$(srctree)/arch/arm/mach-stm/drivers/stm32h7xx-hal-driver/Inc/Legacy)
+APPINCLUDE += $(if $(CONFIG_CPU_SERIES_STM32F1XX), -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-device-f1/Include    \
+                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32f1xx-hal-driver/Inc \
+                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32f1xx-hal-driver/Inc/Legacy)  \
+              $(if $(CONFIG_CPU_SERIES_STM32F4XX), -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-device-f4/Include    \
+                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32f4xx-hal-driver/Inc \
+                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32f4xx-hal-driver/Inc/Legacy)  \
+              $(if $(CONFIG_CPU_SERIES_STM32F7XX), -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-device-f7/Include    \
+                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32f7xx-hal-driver/Inc \
+                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32f7xx-hal-driver/Inc/Legacy)  \
+              $(if $(CONFIG_CPU_SERIES_STM32H5XX), -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-device-h5/Include    \
+                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32h5xx-hal-driver/Inc \
+                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32h5xx-hal-driver/Inc/Legacy)  \
+              $(if $(CONFIG_CPU_SERIES_STM32H7XX), -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-device-h7/Include    \
+                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32h7xx-hal-driver/Inc \
+                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32h7xx-hal-driver/Inc/Legacy)

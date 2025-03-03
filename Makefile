@@ -113,11 +113,11 @@ KBUILD_AFLAGS   += $(MCU) \
                    $(MCU_DEFS) \
 
 # MCU Linker Flags
-LDFLAGS         += $(MCU) \
-                   -T$(srctree)/.FLASH.o.ld
+KBUILD_LDFLAGS  += $(MCU) \
+                   -T$(srctree)/.FLASH.o.ld \
                    -specs=nano.specs \
-                   -wl,--gc-sections
-
+                   -lc -lm -lnosys \
+                   -Wl,--gc-sections
 
 # STM32 Common CMSIS Includes
 APPINCLUDE += -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-core/Include \

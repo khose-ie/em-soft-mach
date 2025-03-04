@@ -4,7 +4,7 @@ jobs:
   steps:
   - !PushRepository
     name: khose-ie
-    remoteUrl: https://github.com/khose-ie/em-soft-mach-stm.git
+    remoteUrl: https://github.com/khose-ie/em-soft-mach.git
     passwordSecret: GITHUB_TOKEN
     force: false
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL

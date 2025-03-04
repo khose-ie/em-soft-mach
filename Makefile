@@ -1,3 +1,10 @@
+#
+# USER CONFIGURATION VARIABLE
+#
+BSP_PATH    ?= libs/STMicroelectronics/bsp
+CMSIS_PATH  ?= libs/STMicroelectronics/cmsis
+DRIVER_PATH ?= libs/STMicroelectronics/driver
+
 # CPU
 CPU = $(if $(CONFIG_CPU_SERIES_STM32F1XX), -mcpu=cortex-m3)  \
       $(if $(CONFIG_CPU_SERIES_STM32F4XX), -mcpu=cortex-m4)  \
@@ -119,22 +126,22 @@ KBUILD_LDFLAGS  += $(MCU) \
                    -lc -lm -lnosys
 
 # STM32 Common CMSIS Includes
-APPINCLUDE += -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-core/Include \
-              -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-core/RTOS2/Include
+APPINCLUDE += -I$(srctree)/$(CMSIS_PATH)/cmsis-core/Include \
+              -I$(srctree)/$(CMSIS_PATH)/cmsis-core/RTOS2/Include
 
 # MCU Includes
-APPINCLUDE += $(if $(CONFIG_CPU_SERIES_STM32F1XX), -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-device-f1/Include    \
-                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32f1xx-hal-driver/Inc \
-                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32f1xx-hal-driver/Inc/Legacy)  \
-              $(if $(CONFIG_CPU_SERIES_STM32F4XX), -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-device-f4/Include    \
-                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32f4xx-hal-driver/Inc \
-                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32f4xx-hal-driver/Inc/Legacy)  \
-              $(if $(CONFIG_CPU_SERIES_STM32F7XX), -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-device-f7/Include    \
-                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32f7xx-hal-driver/Inc \
-                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32f7xx-hal-driver/Inc/Legacy)  \
-              $(if $(CONFIG_CPU_SERIES_STM32H5XX), -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-device-h5/Include    \
-                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32h5xx-hal-driver/Inc \
-                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32h5xx-hal-driver/Inc/Legacy)  \
-              $(if $(CONFIG_CPU_SERIES_STM32H7XX), -I$(srctree)/arch/arm/mach-stm/cmsis/cmsis-device-h7/Include    \
-                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32h7xx-hal-driver/Inc \
-                                                   -I$(srctree)/arch/arm/mach-stm/drivers/stm32h7xx-hal-driver/Inc/Legacy)
+APPINCLUDE += $(if $(CONFIG_CPU_SERIES_STM32F1XX), -I$(srctree)/$(CMSIS_PATH)/cmsis-device-f1/Include \
+                                                   -I$(srctree)/$(DRIVER_PATH)/stm32f1xx-hal-driver/Inc \
+                                                   -I$(srctree)/$(DRIVER_PATH)/stm32f1xx-hal-driver/Inc/Legacy) \
+              $(if $(CONFIG_CPU_SERIES_STM32F4XX), -I$(srctree)/$(CMSIS_PATH)/cmsis-device-f4/Include \
+                                                   -I$(srctree)/$(DRIVER_PATH)/stm32f4xx-hal-driver/Inc \
+                                                   -I$(srctree)/$(DRIVER_PATH)/stm32f4xx-hal-driver/Inc/Legacy) \
+              $(if $(CONFIG_CPU_SERIES_STM32F7XX), -I$(srctree)/$(CMSIS_PATH)/cmsis-device-f7/Include \
+                                                   -I$(srctree)/$(DRIVER_PATH)/stm32f7xx-hal-driver/Inc \
+                                                   -I$(srctree)/$(DRIVER_PATH)/stm32f7xx-hal-driver/Inc/Legacy) \
+              $(if $(CONFIG_CPU_SERIES_STM32H5XX), -I$(srctree)/$(CMSIS_PATH)/cmsis-device-h5/Include \
+                                                   -I$(srctree)/$(DRIVER_PATH)/stm32h5xx-hal-driver/Inc \
+                                                   -I$(srctree)/$(DRIVER_PATH)/stm32h5xx-hal-driver/Inc/Legacy) \
+              $(if $(CONFIG_CPU_SERIES_STM32H7XX), -I$(srctree)/$(CMSIS_PATH)/cmsis-device-h7/Include \
+                                                   -I$(srctree)/$(DRIVER_PATH)/stm32h7xx-hal-driver/Inc \
+                                                   -I$(srctree)/$(DRIVER_PATH)/stm32h7xx-hal-driver/Inc/Legacy)

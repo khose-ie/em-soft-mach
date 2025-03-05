@@ -1,0 +1,8 @@
+choice
+	prompt "Platform models"
+	depends on CPU_SERIES_STM32H5XX
+
+config PLAT_MODEL_NUCLEO_H563ZI
+	bool "ST NUCLEO-H563ZI"
+
+endchoice

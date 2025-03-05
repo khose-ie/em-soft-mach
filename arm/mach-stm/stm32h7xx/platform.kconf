@@ -1,0 +1,6 @@
+choice
+	prompt "Platform models"
+	depends on CPU_SERIES_STM32H7XX
+
+
+endchoice

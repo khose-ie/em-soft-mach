@@ -1,0 +1,49 @@
+choice
+	prompt "CPU Model with STMicroelectronics"
+	depends on CPU_SERIES_STM32F7XX
+
+config CPU_MODEL_STM32F722XX
+	bool "STM32F722XX"
+
+config CPU_MODEL_STM32F723XX
+	bool "STM32F723XX"
+
+config CPU_MODEL_STM32F730XX
+	bool "STM32F730XX"
+
+config CPU_MODEL_STM32F732XX
+	bool "STM32F732XX"
+
+config CPU_MODEL_STM32F733XX
+	bool "STM32F733XX"
+
+config CPU_MODEL_STM32F745XX
+	bool "STM32F745XX"
+
+config CPU_MODEL_STM32F746XX
+	bool "STM32F746XX"
+
+config CPU_MODEL_STM32F750XX
+	bool "STM32F750XX"
+
+config CPU_MODEL_STM32F756XX
+	bool "STM32F756XX"
+
+config CPU_MODEL_STM32F765XX
+	bool "STM32F765XX"
+
+config CPU_MODEL_STM32F767XX
+	bool "STM32F767XX"
+
+config CPU_MODEL_STM32F769XX
+	bool "STM32F769XX"
+
+config CPU_MODEL_STM32F777XX
+	bool "STM32F777XX"
+
+config CPU_MODEL_STM32F779XX
+	bool "STM32F779XX"
+
+endchoice
+
+source "arch/arm/mach-stm/stm32f7xx/platform.kconf"

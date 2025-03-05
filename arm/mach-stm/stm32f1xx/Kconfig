@@ -1,0 +1,49 @@
+choice
+	prompt "CPU Model with STMicroelectronics"
+	depends on CPU_SERIES_STM32F1XX
+
+config CPU_MODEL_STM32F100XB
+	bool "STM32F100XB"
+
+config CPU_MODEL_STM32F100XE
+	bool "STM32F100XE"
+
+config CPU_MODEL_STM32F101X6
+	bool "STM32F101X6"
+
+config CPU_MODEL_STM32F101XB
+	bool "STM32F101XB"
+
+config CPU_MODEL_STM32F101XE
+	bool "STM32F101XE"
+
+config CPU_MODEL_STM32F101XG
+	bool "STM32F101XG"
+
+config CPU_MODEL_STM32F102X6
+	bool "STM32F102X6"
+
+config CPU_MODEL_STM32F102XB
+	bool "STM32F102XB"
+
+config CPU_MODEL_STM32F103X6
+	bool "STM32F103X6"
+
+config CPU_MODEL_STM32F103XB
+	bool "STM32F103XB"
+
+config CPU_MODEL_STM32F103XE
+	bool "STM32F103XE"
+
+config CPU_MODEL_STM32F103XG
+	bool "STM32F103XG"
+
+config CPU_MODEL_STM32F105XC
+	bool "STM32F105XC"
+
+config CPU_MODEL_STM32F107XC
+	bool "STM32F107XC"
+
+endchoice
+
+source "arch/arm/mach-stm/stm32f1xx/platform.kconf"

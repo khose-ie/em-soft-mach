@@ -4,5 +4,6 @@ choice
 
 config PLAT_MODEL_NUCLEO_H563ZI
 	bool "ST NUCLEO-H563ZI"
+	depends on CPU_MODEL_STM32H563XX
 
 endchoice

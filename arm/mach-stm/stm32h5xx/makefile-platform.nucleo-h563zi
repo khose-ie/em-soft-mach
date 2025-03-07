@@ -1,5 +1,5 @@
 # Platform C Flags
-KBUILD_CFLAGS   += -DUSE_NUCLEO_64
+KBUILD_CFLAGS   += -DUSE_NUCLEO_144
 
 # Platform LD Flags
 KBUILD_LDFLAGS  += -T$(srctree)/$(PLATFORM_PATH)/stm/nucleo-h563zi/STM32H563xx_FLASH.ld

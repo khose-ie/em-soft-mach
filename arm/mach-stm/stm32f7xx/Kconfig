@@ -1,5 +1,5 @@
 choice
-	prompt "CPU Model with STMicroelectronics"
+	prompt "CPU Model"
 	depends on CPU_SERIES_STM32F7XX
 
 config CPU_MODEL_STM32F722XX
@@ -46,4 +46,11 @@ config CPU_MODEL_STM32F779XX
 
 endchoice
 
-source "arch/arm/mach-stm/stm32f7xx/platform.kconf"
+choice
+	prompt "Platform models"
+	depends on CPU_SERIES_STM32F7XX
+
+source "arch/arm/mach-stm/stm32f7xx/kconfig-platform"
+
+endchoice
+

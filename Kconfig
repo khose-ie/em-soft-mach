@@ -1,4 +1,4 @@
-menu "Chip architecture and models"
+menu " Arch & Platform"
 
 choice
 	prompt "CPU Arch"

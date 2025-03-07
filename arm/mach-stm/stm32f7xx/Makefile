@@ -50,6 +50,8 @@ KBUILD_LDFLAGS  += $(MCU) \
 
 # STM32 Common CMSIS Includes
 APPINCLUDE += -I$(srctree)/$(CMSIS_PATH)/cmsis-core/Include \
+              -I$(srctree)/$(CMSIS_PATH)/cmsis-core/Core/Include \
+              -I$(srctree)/$(CMSIS_PATH)/cmsis-core/NN/Include \
               -I$(srctree)/$(CMSIS_PATH)/cmsis-core/RTOS2/Include
 
 # MCU Includes
@@ -57,4 +59,4 @@ APPINCLUDE += -I$(srctree)/$(CMSIS_PATH)/cmsis-device-f7/Include \
               -I$(srctree)/$(DRIVER_PATH)/stm32f7xx-hal-driver/Inc \
               -I$(srctree)/$(DRIVER_PATH)/stm32f7xx-hal-driver/Inc/Legacy
 
--include arch/arm/mach-stm/stm32f7xx/platform.mk
+include arch/arm/mach-stm/stm32f7xx/makefile-platform

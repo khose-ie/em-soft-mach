@@ -1,0 +1,1 @@
+-include $(if $(CONFIG_PLAT_MODEL_NUCLEO_F767ZI), arch/arm/mach-stm/stm32h7xx/makefile-platform.nucleo-f767zi)

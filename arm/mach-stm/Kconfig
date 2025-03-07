@@ -1,5 +1,5 @@
 choice
-	prompt "CPU Series with STMicroelectronics"
+	prompt "CPU Series"
 	depends on CPU_MACH_ST
 
 config CPU_SERIES_STM32F1XX
